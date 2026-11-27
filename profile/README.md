@@ -1,7 +1,7 @@
 <a href="https://www.sigdraw.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <img alt="Sigdraw — Build Chips Faster. An illustrative waveform view of a CPU testbench." src="assets/banner-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.webp">
+    <img alt="Sigdraw in simulation mode: lowRISC Ibex's ALU drawn as a block diagram, with each wire showing its value at the waveform cursor." src="assets/banner-light.webp" width="100%">
   </picture>
 </a>
 
@@ -23,14 +23,16 @@ We built the IDE we wanted as hardware engineers. Hardware deserves better tools
 
 <table>
   <tr>
-    <td width="50%" valign="top"><b>Diagrams</b><br>Your RTL, drawn live as block diagrams that stay in sync with the source. Edit either one and the other follows.</td>
-    <td width="50%" valign="top"><b>Simulation</b><br>Bring your own simulator. Sigdraw finds your testbenches, runs them and keeps every run.</td>
+    <td width="50%" valign="top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/diagrams-dark.png"><img alt="Sigdraw drawing Ibex's instruction counter as a block diagram: an always_comb block with its code inside, wired to a flop and an assign block." src="assets/diagrams-light.png" width="100%"></picture><br><b>Diagrams</b><br>Your RTL, drawn live as block diagrams that stay in sync with the source. Edit either one and the other follows.</td>
+    <td width="50%" valign="middle"><b>Simulation</b><br>Bring your own simulator. Sigdraw finds your testbenches, runs them and keeps every run.<br><br><i>Simulation mode, pictured at the top:</i> after a run, the waveform's cursor drives values onto the diagram's wires.</td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><b>Waveforms</b><br>VCD, FST and GHW files, indexed once and drawn on the GPU at your display's refresh rate.</td>
-    <td width="50%" valign="top"><b>Editor</b><br>A real code editor built for HDL, with terminals and git in the same window.</td>
+    <td width="50%" valign="top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/waveforms-dark.png"><img alt="Sigdraw's waveform viewer: clock, reset, retired-instruction, program-counter and instruction-fetch signals in coloured groups beside their traces." src="assets/waveforms-light.png" width="100%"></picture><br><b>Waveforms</b><br>VCD, FST and GHW files, indexed once and drawn on the GPU at your display's refresh rate.</td>
+    <td width="50%" valign="top"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/editor-dark.png"><img alt="ibex_controller.sv open in Sigdraw's code editor, with a miniature of the module's diagram in the corner." src="assets/editor-light.png" width="100%"></picture><br><b>Editor</b><br>A real code editor built for HDL, with terminals and git in the same window.</td>
   </tr>
 </table>
+
+<sub>Screenshots show <a href="https://github.com/lowRISC/ibex">lowRISC's Ibex</a> (Apache-2.0). Ibex © lowRISC contributors.</sub>
 
 <details>
 <summary><b>Supported languages, simulators and formats</b></summary>
@@ -55,17 +57,12 @@ We built the IDE we wanted as hardware engineers. Hardware deserves better tools
 
 We're releasing two of the projects behind Sigdraw as open source under **MIT OR Apache-2.0**. Both are written in Rust and both are early. Once the repositories open, we'll develop them in public rather than wait until they're finished.
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/redstone-dark.svg">
-    <img alt="Redstone: a SystemVerilog simulator written in Rust. Pre-alpha, coming soon." src="assets/redstone-light.svg" width="49%">
-  </picture>
-  &nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/rainglass-dark.svg">
-    <img alt="Rainglass: a UI framework for Rust with a headless core. Early, coming soon." src="assets/rainglass-light.svg" width="49%">
-  </picture>
-</p>
+<table>
+  <tr>
+    <td width="50%" valign="top"><b>Redstone</b><br><sub>Pre-alpha · Coming soon</sub><br>A SystemVerilog simulator written in Rust.</td>
+    <td width="50%" valign="top"><b>Rainglass</b><br><sub>Early · Coming soon</sub><br>A UI framework for Rust with a headless core.</td>
+  </tr>
+</table>
 
 **Redstone** is a SystemVerilog simulator for IEEE 1800-2017 and 1800-2023. It uses [slang](https://github.com/MikePopoloski/slang) as its frontend, has full four-state semantics from day one, and runs multithreaded on the CPU. Correctness comes before speed: every fast path must match a reference interpreter bit for bit.
 
