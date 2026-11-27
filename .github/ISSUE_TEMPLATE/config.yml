@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sigdraw app feedback
+    url: https://www.sigdraw.com/feedback
+    about: Bug reports and feature requests for the Sigdraw IDE, which is closed source and not tracked on GitHub.
+  - name: Report a security vulnerability
+    url: https://github.com/Sigdraw/.github/blob/main/SECURITY.md
+    about: Please report vulnerabilities privately by email to hello@sigdraw.com. Do not open a public issue.
+  - name: General questions
+    url: https://www.sigdraw.com/contact
+    about: For anything else, contact us at hello@sigdraw.com.
